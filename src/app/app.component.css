@@ -6,7 +6,6 @@
 }
 
 header{
-  padding: 1px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -50,6 +49,15 @@ nav{
 .nav__links li a:hover{
   text-decoration: underline;
 
+}
+
+footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
 }
 
 
