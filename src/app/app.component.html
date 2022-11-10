@@ -1,37 +1,14 @@
-<div class="">
+<div>
+    <app-header></app-header>
+    <!-- Full Width Column -->
 
-  <!-- Início do header -->
-
-    <header>
-      <nav>
-        <img src="../assets/ifood-43.svg" alt="logo" class="logo">
-        <ul class="nav__links">
-          <li><a href="#">Ifood</a></li>
-          <li><a href="#">Restautantes</a></li>
-          <li><a href="#">Sobre</a></li>
-        </ul>
-      </nav>
-    </header>
-
-  <!-- Fim do header -->
-
-  <!-- Full Width Column -->
-  <div class="content-wrapper">
+    <div class="content-wrapper">
     <div class="container">
 
-      {{content}}
+      <router-outlet></router-outlet>
 
     </div>
   </div>
 
-  <!-- snakbar deve ser aqui -->
-
-  <footer class="bg-light text-center text-lg-start">
-    <!-- Copyright -->
-    <div class="text-center p-3">
-      © 2020 Copyright:
-      <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
-    </div>
-    <!-- Copyright -->
-  </footer>
+  <app-footer></app-footer>
 </div>
