@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Restaurant } from './Restaurant.model';
+import { faStar } from "@fortawesomE/free-solid-svg-icons";
 
 @Component({
   selector: 'app-restaurant',
@@ -9,6 +10,8 @@ import { Restaurant } from './Restaurant.model';
 export class RestaurantComponent implements OnInit {
 
   @Input() restaurant!: Restaurant
+  faStar = faStar
+
 
   constructor() { }
 
