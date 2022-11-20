@@ -1,0 +1,10 @@
+span .card-img{
+  margin-top: 20px;
+  width: 100px;
+}
+
+.Adicionar{
+  display: flex;
+  align-items: center;
+}
+
