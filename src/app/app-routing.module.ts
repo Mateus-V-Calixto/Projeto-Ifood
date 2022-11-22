@@ -8,7 +8,7 @@ import { RestaurantsComponent } from './restaurants/restaurants.component';
 const routes: Routes = [
   {path: '', component:HomeComponent},
   {path:'restaurants', component:RestaurantsComponent},
-  {path:'restaurants/:id', component:RestaurantDetailComponent},
+  {path: 'restaurant/:id', component:RestaurantDetailComponent},
   {path: 'about',component:AboutComponent}
 ];
 

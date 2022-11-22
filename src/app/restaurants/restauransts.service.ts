@@ -18,4 +18,9 @@ export class RestauranstsService {
   }
 
 
+  restaurantById(id:string){
+    return this.http.get<Restaurant>(`${this.url}restaurants/${id}`)
+  }
+
+
 }

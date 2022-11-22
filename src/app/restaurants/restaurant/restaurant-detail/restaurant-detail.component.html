@@ -6,7 +6,7 @@
 </section>
 
 
-<section class="content">
+<section class="content" *ngIf="restaurant">
 
 
 
@@ -14,24 +14,24 @@
   <div class="row">
     <div class="card mb-3" style="height: 400px;">
       <div class="titulo">
-        <h3>Nome do restaurante <span><fa-icon [icon]="faStar"></fa-icon>Nota</span></h3>
+        <h3>{{restaurant.name}} <span><fa-icon [icon]="faStar"></fa-icon>{{restaurant.rating}}</span></h3>
 
       </div>
 
       <div class="row no-gutters">
         <div class="col-md-3">
-          <img src="../../../../assets/img/restaurants/burgerhouse.png" class="card-img" alt="...">
+          <img src="{{restaurant.imagePath}}" class="card-img" alt="...">
         </div>
         <div class="col-md-8">
           <div class="card-body">
             <h5 class="card-title">Categoria</h5>
-            <p class="card-text">Padaria</p>
+            <p class="card-text">{{restaurant.category}}</p>
 
             <h5 class="card-title">Quem somos</h5>
-            <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae inventore pariatur mollitia accusantium, quo atque, possimus iste nostrum molestias vitae laudantium! Eos dignissimos, amet nobis facere at necessitatibus veritatis ratione.</p>
+            <p class="card-text">{{restaurant.about}}</p>
 
             <h5 class="card-title">Horarios</h5>
-            <p class="card-text">Funciona de segunda a sexta de 8h as 22h</p>
+            <p class="card-text">{{restaurant.hours}}</p>
 
           </div>
         </div>

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
+import { IconService } from 'src/app/icon/icon.service';
 
 @Component({
   selector: 'app-menu',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  constructor() { }
+  faCircle!:IconDefinition
+
+
+
+  constructor(private iconService:IconService) { }
 
   ngOnInit(): void {
+    this.faCircle = this.iconService.faCircle
   }
 
 }
