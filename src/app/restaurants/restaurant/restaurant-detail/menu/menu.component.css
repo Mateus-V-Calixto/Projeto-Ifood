@@ -1,6 +1,7 @@
 span .card-img{
   margin-top: 20px;
   width: 100px;
+
 }
 
 .Adicionar{
@@ -8,3 +9,6 @@ span .card-img{
   align-items: center;
 }
 
+.Adicionar span{
+  border: 1px solid black;
+}
