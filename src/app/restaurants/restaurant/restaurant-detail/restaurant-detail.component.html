@@ -38,10 +38,10 @@
       </div>
 
       <div class="box-footer ">
-        <a class="separador" href="#">
+        <a class="separador" routerLinkActive="active" [routerLink]="['menu']">
            Menu
         </a>
-        <a  href="##">
+        <a  routerLinkActive="active" [routerLink]="['reviews']">
            Avaliações
         </a>
       </div>
@@ -52,7 +52,7 @@
 
 
   <div class="row">
-      <app-menu></app-menu>
+      <router-outlet></router-outlet>
 </div>
 
 </section>

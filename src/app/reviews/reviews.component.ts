@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
+import { IconService } from '../icon/icon.service';
 
 @Component({
   selector: 'app-reviews',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReviewsComponent implements OnInit {
 
-  constructor() { }
+  faStar!:IconDefinition
+  faUser!:IconDefinition
+  constructor( private iconService:IconService) { }
 
   ngOnInit(): void {
+    this.faStar = this.iconService.faStar
+    this.faUser = this.iconService.faUser
   }
 
 }
