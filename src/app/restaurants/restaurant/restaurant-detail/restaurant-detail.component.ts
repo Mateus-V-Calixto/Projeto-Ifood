@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
+import { IconService } from 'src/app/icon/icon.service';
 
 @Component({
   selector: 'app-restaurant-detail',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RestaurantDetailComponent implements OnInit {
 
-  constructor() { }
+  faStar!:IconDefinition
+
+  constructor(private iconService:IconService) { }
 
   ngOnInit(): void {
+    this.faStar = this.iconService.faStar
+
   }
 
 }
