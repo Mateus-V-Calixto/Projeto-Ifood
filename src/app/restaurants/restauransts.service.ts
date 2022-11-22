@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { UrlTree } from '@angular/router';
 import { environment } from 'src/environments/environment';
+import { Reviews } from '../reviews/reviews.model';
 import { Restaurant } from './restaurant/Restaurant.model';
 
 
@@ -22,5 +24,12 @@ export class RestauranstsService {
     return this.http.get<Restaurant>(`${this.url}restaurants/${id}`)
   }
 
+  reviesOfRestaurant(id:string){
+    return this.http.get<Reviews>(`${this.url}restaurants/${id}/reviews`)
+  }
+
+  menuOfRestaurant(id:string){
+    
+  }
 
 }
