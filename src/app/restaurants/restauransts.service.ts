@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { UrlTree } from '@angular/router';
 import { environment } from 'src/environments/environment';
 import { Reviews } from '../reviews/reviews.model';
+import { MenuItems } from './restaurant/restaurant-detail/menu-item/menuItem.model';
 import { Restaurant } from './restaurant/Restaurant.model';
 
 
@@ -29,7 +30,7 @@ export class RestauranstsService {
   }
 
   menuOfRestaurant(id:string){
-    
+    return this.http.get<MenuItems>(`${this.url}restaurants/${id}/menu`)
   }
 
 }

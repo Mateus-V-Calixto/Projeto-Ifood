@@ -3,75 +3,8 @@
 
 <div class="col-9">
 
-    <div class="card mb-2 style=" style="height: 150px;">
+  <app-menu-item *ngFor="let itemMenu of menu |async" [item]="itemMenu" (add)="addMenuItem($event)"></app-menu-item>
 
-      <div class="row no-gutters">
-        <div class="col-md-1">
-          <span><img class="card-img" src="assets/img/foods/cupcake.png"></span>
-        </div>
-        <div class="col-md-8">
-          <div class="card-body">
-              <p class="card-title">Croissant</p>
-              <p class="card-text">Recheado com queijo e presunto</p>
-              <p class="card-text">R$ 10,00</p>
-            </div>
-          </div>
-          <div class="Adicionar col-md-1"><i class="fa fa-plus-circle"></i> <span>Adicionar</span></div>
-        </div>
-        <!-- /.info-box-content -->
-    </div>
-
-    <div class="card mb-2 style=" style="height: 150px;">
-
-        <div class="row no-gutters">
-          <div class="col-md-1">
-            <span><img class="card-img" src="assets/img/foods/cupcake.png"></span>
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-                <p class="card-title">Croissant</p>
-                <p class="card-text">Recheado com queijo e presunto</p>
-                <p class="card-text">R$ 10,00</p>
-              </div>
-            </div>
-            <div class="Adicionar col-md-1"><i class="fa fa-plus-circle"></i> <span>Adicionar</span></div>
-          </div>
-          <!-- /.info-box-content -->
-    </div>
-    <div class="card mb-2 style=" style="height: 150px;">
-
-        <div class="row no-gutters">
-          <div class="col-md-1">
-            <span><img class="card-img" src="assets/img/foods/cupcake.png"></span>
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-                <p class="card-title">Croissant</p>
-                <p class="card-text">Recheado com queijo e presunto</p>
-                <p class="card-text">R$ 10,00</p>
-              </div>
-            </div>
-            <div class="Adicionar col-md-1"><i class="fa fa-plus-circle"></i> <span>Adicionar</span></div>
-          </div>
-          <!-- /.info-box-content -->
-    </div>
-    <div class="card mb-2 style=" style="height: 150px;">
-
-        <div class="row no-gutters">
-          <div class="col-md-1">
-            <span><img class="card-img" src="assets/img/foods/cupcake.png"></span>
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-                <p class="card-title">Croissant</p>
-                <p class="card-text">Recheado com queijo e presunto</p>
-                <p class="card-text">R$ 10,00</p>
-              </div>
-            </div>
-            <div class="Adicionar col-md-1"><i class="fa fa-plus-circle"></i> <span>Adicionar</span></div>
-          </div>
-          <!-- /.info-box-content -->
-    </div>
 </div>
 
   <div class="col-3 ">
