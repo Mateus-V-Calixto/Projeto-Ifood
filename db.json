@@ -370,5 +370,61 @@
       "restaurantId": "tasty-treats"
     }
   ],
-  "orders": []
+  "orders": [
+    {
+      "id": 1
+    },
+    {
+      "endereco": "Rua 66",
+      "numero": 111,
+      "complemento": "111",
+      "paymentOption": "MON",
+      "orderItems": [
+        {
+          "quantidade": 1,
+          "menuId": "cup-cake"
+        }
+      ],
+      "id": 2
+    },
+    {
+      "endereco": "Rua 66",
+      "numero": 11231,
+      "complemento": "111",
+      "paymentOption": "MON",
+      "orderItems": [
+        {
+          "quantidade": 1,
+          "menuId": "cup-cake"
+        }
+      ],
+      "id": 3
+    },
+    {
+      "endereco": "Sao Sebastiao",
+      "numero": 111,
+      "complemento": "",
+      "paymentOption": "MON",
+      "orderItems": [
+        {
+          "quantidade": 3,
+          "menuId": "cup-cake"
+        }
+      ],
+      "id": 4
+    },
+    {
+      "endereco": "Rua 66",
+      "numero": 111,
+      "complemento": "111",
+      "paymentOption": "CRE",
+      "orderItems": [
+        {
+          "quantidade": 11,
+          "menuId": "cup"
+        }
+      ],
+      "id": 5
+    }
+  ]
 }

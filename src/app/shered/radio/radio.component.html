@@ -1,0 +1,6 @@
+<div style="padding-top: 5px;" *ngFor="let option of options">
+  <label (click)="setValue(option.value)">
+    <input type="radio" name="r3" class="flat-red"  [class.checked]="option.value == value"/>
+    {{option.label}}
+  </label>
+</div>

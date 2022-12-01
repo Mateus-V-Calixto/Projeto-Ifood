@@ -19,11 +19,7 @@ export class RestaurantDetailComponent implements OnInit {
   constructor(private iconService:IconService, private restaurantsService:RestauranstsService, private route:ActivatedRoute) { }
 
   ngOnInit(): void {
-
-
-
     this.faStar = this.iconService.faStar
-
 
     this.restaurantsService.restaurantById(this.route.snapshot.params['id']).subscribe((restaurant) => {
       this.restaurant = restaurant

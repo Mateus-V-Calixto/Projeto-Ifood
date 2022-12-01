@@ -20,6 +20,14 @@ import { MenuComponent } from './restaurants/restaurant/restaurant-detail/menu/m
 import { ShoppingCartComponent } from './restaurants/restaurant/restaurant-detail/shopping-cart/shopping-cart.component';
 import { MenuItemComponent } from './restaurants/restaurant/restaurant-detail/menu-item/menu-item.component';
 import { ReviewsComponent } from './reviews/reviews.component';
+import { OrderComponent } from './order/order.component';
+import { FormsModule , ReactiveFormsModule} from '@angular/forms';
+import { InputComponent } from './shered/input/input.component';
+import { RadioComponent } from './shered/radio/radio.component';
+import { OrderItensComponent } from './order/order-itens/order-itens.component';
+import { FreteDeleviryComponent } from './frete-deleviry/frete-deleviry.component';
+import { OrderSumaryComponent } from './order/order-sumary/order-sumary.component';
+import { AvaliationComponent } from './shered/avaliation/avaliation.component';
 
 @NgModule({
   declarations: [
@@ -34,13 +42,23 @@ import { ReviewsComponent } from './reviews/reviews.component';
     MenuComponent,
     ShoppingCartComponent,
     MenuItemComponent,
-    ReviewsComponent
+    ReviewsComponent,
+    OrderComponent,
+    InputComponent,
+    RadioComponent,
+    OrderItensComponent,
+    FreteDeleviryComponent,
+    OrderSumaryComponent,
+    AvaliationComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

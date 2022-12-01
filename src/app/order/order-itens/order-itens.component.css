@@ -1,0 +1,19 @@
+.fa-minus, .fa-plus{
+  color: #0069D9;
+}
+
+.fa-remove{
+  color: red;
+}
+
+a{
+  color: rgb(255, 115, 0);
+}
+
+a:hover{
+
+  color: rgb(170, 54, 0);
+  border: 1px solid rgb(255, 88, 88);
+
+  border-radius: 4px;
+}
