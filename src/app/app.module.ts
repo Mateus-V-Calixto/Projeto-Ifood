@@ -19,11 +19,7 @@ import { MenuComponent } from './restaurants/restaurant/restaurant-detail/menu/m
 import { ShoppingCartComponent } from './restaurants/restaurant/restaurant-detail/shopping-cart/shopping-cart.component';
 import { MenuItemComponent } from './restaurants/restaurant/restaurant-detail/menu-item/menu-item.component';
 import { ReviewsComponent } from './reviews/reviews.component';
-import { OrderComponent } from './order/order.component';
 import { FormsModule , ReactiveFormsModule} from '@angular/forms';
-import { OrderItensComponent } from './order/order-itens/order-itens.component';
-import { FreteDeleviryComponent } from './frete-deleviry/frete-deleviry.component';
-import { OrderSumaryComponent } from './order/order-sumary/order-sumary.component';
 import { SheredModule } from './shered/shered.module';
 
 @NgModule({
@@ -39,10 +35,7 @@ import { SheredModule } from './shered/shered.module';
     ShoppingCartComponent,
     MenuItemComponent,
     ReviewsComponent,
-    OrderComponent,
-    OrderItensComponent,
-    FreteDeleviryComponent,
-    OrderSumaryComponent,
+
   ],
   imports: [
     BrowserModule,

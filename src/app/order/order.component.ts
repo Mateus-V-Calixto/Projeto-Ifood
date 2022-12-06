@@ -105,7 +105,7 @@ export class OrderComponent implements OnInit {
       console.log(orderId);
       this.orderService.clear()
       this.form.reset()
-      this.route.navigate(['/order-summary'])
+      this.route.navigate(['order/summary'])
     })
 
 

@@ -11,8 +11,7 @@ import { ReviewsComponent } from './reviews/reviews.component';
 const routes: Routes = [
   {path: '', component:HomeComponent},
   {path:'restaurants', component:RestaurantsComponent},
-  {path:'order', component:OrderComponent},
-  {path:'order-summary', component:OrderSumaryComponent},
+  {path:'order', loadChildren:()=>import('./order/order.module').then(m => m.OrderModule)},
   {path: 'restaurant/:id', component:RestaurantDetailComponent , children: [
     {path: '', redirectTo:'menu', pathMatch:'full'},
     {path: 'menu', component:MenuComponent},
