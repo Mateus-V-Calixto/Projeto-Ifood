@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { CartItem } from '../restaurants/restaurant/restaurant-detail/shopping-cart/shopping-cart.model';
 import { RadioOption } from '../shered/radio/radio-options.model';
@@ -13,6 +13,10 @@ import { OrderService } from './order.service';
 })
 export class OrderComponent implements OnInit {
 
+  emailPattern = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+
+  numberPattern = /^[0-9]*$/;
+
   form!:FormGroup
 
   paymentOptions:RadioOption[] = [
@@ -25,11 +29,40 @@ export class OrderComponent implements OnInit {
 
   ngOnInit(): void {
     this.form = this.formBilder.group({
+      nome:['',[Validators.required, Validators.minLength(5)]],
+      email:['', [Validators.required, Validators.pattern(this.emailPattern)]],
+      emailConfirmacao:['', [Validators.required, Validators.pattern(this.emailPattern)]],
       endereco:['',[Validators.required, Validators.minLength(3)]],
-      numero:['', [Validators.required, Validators.pattern("^[0-9]*$")]],
+      numero:['', [Validators.required, Validators.pattern(this.numberPattern)]],
       complemento:[''],
       paymentOption:['',Validators.required]
-    })
+    },{validator:OrderComponent.emailIguais})
+  }
+
+  static emailIguais(group:AbstractControl){
+    const email:string = group.get<string>('email')?.value
+    const emailConfirmacao:string = group.get<string>('emailConfirmacao')?.value
+
+    if(!email || !emailConfirmacao){
+      return undefined
+    }
+
+    if (email != emailConfirmacao) {
+      return {emailDiferente:true}
+    }
+
+    return undefined;
+
+  }
+
+  get iptNome (){
+    return this.form.get('nome')!
+  }
+  get iptEmail (){
+    return this.form.get('email')!
+  }
+  get iptEmailConfirmacao (){
+    return this.form.get('emailConfirmacao')!
   }
 
   get iptEndereco(){

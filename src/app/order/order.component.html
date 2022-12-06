@@ -4,7 +4,8 @@
 
 <section class="content card">
   <section class="invoice">
-
+        {{form.value | json}}
+        {{form.valid}}
         <form [formGroup]="form" novalidate >
           <div class="row">
             <div class="col-xs-12">
@@ -12,6 +13,48 @@
                 <i class="fa fa-shopping-cart"></i> Finalize o seu pedido
               </h2>
             </div>
+          </div>
+
+
+
+          <div class="row invoice-info">
+            <div class="col-xs-12">
+              <p class="lead">Seus Dados:</p>
+            </div>
+
+            <div class="col-xs-12">
+              <span class="help-block pull-right red" *ngIf="form.hasError('emailDiferente')">Email Diferente</span>
+            </div>
+
+            <div class="col-sm-6 col-xs-12">
+              <div class="form-group">
+                <label class="control-label sr-only" for="inputSuccess"><i class="fa fa-check"></i>Nome</label>
+                <input type="text" class="form-control" name="endereco"  formControlName="nome"  id="inputSuccess" placeholder="Nome" autocomplete="off"
+                  [class.is-valid]="iptNome.valid && (iptNome.dirty || iptNome.touched)"
+                  [class.is-invalid]="!iptNome.valid && (iptNome.dirty || iptNome.touched)">
+                <span *ngIf="!iptNome.valid && (iptNome.dirty || iptNome.touched)" class="help-block"><i class="fa fa-remove"></i> Campo obrigatorio com no minimo 5 letras</span>
+              </div>
+            </div>
+
+            <div class="col-sm-2 col-xs-6">
+              <div class="form-group">
+                <label class="control-label sr-only" for="inputSuccess"><i class="fa fa-check"></i> Email</label>
+                <input type="email" class="form-control is-valid" name="email" formControlName="email"    id="inputSuccess" placeholder="Email"
+                  [class.is-valid]="iptEmail.valid && (iptEmail.dirty || iptEmail.touched)"
+                  [class.is-invalid]="!iptEmail.valid && (iptEmail.dirty || iptEmail.touched)">
+                  <span *ngIf="iptEmail.invalid && iptEmail.touched" class="help-block"><i class="fa fa-remove"></i> Campo obrigatorio</span>
+              </div>
+            </div>
+
+            <div class="col-sm-4 col-xs-6">
+              <div class="form-group">
+                <label class="control-label sr-only" for="inputSuccess"><i class="fa fa-check"></i> Confirmação do Email</label>
+                <input  type="email" class="form-control " formControlName="emailConfirmacao"   id="inputSuccess" placeholder="Confirmação do email">
+
+              </div>
+
+            </div>
+            <!-- /.col -->
           </div>
 
           <div class="row invoice-info">
@@ -32,7 +75,7 @@
             <div class="col-sm-2 col-xs-6">
               <div class="form-group">
                 <label class="control-label sr-only" for="inputSuccess"><i class="fa fa-check"></i> Número</label>
-                <input type="number" class="form-control is-valid" name="numero" formControlName="numero" required   id="inputSuccess" placeholder="Número"
+                <input type="number" class="form-control is-valid" name="numero" formControlName="numero"    id="inputSuccess" placeholder="Número"
                   [class.is-valid]="iptNumero.valid && (iptNumero.dirty || iptNumero.touched)"
                   [class.is-invalid]="!iptNumero.valid && (iptNumero.dirty || iptNumero.touched)">
                   <span *ngIf="iptNumero.invalid && iptNumero.touched" class="help-block"><i class="fa fa-remove"></i> Campo obrigatorio</span>
