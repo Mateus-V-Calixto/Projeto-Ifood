@@ -12,7 +12,6 @@ import { HttpClientModule } from "@angular/common/http";
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
 import { RestaurantsComponent } from './restaurants/restaurants.component';
 import { RestaurantComponent } from './restaurants/restaurant/restaurant.component';
 import { RestaurantDetailComponent } from './restaurants/restaurant/restaurant-detail/restaurant-detail.component';
@@ -22,12 +21,10 @@ import { MenuItemComponent } from './restaurants/restaurant/restaurant-detail/me
 import { ReviewsComponent } from './reviews/reviews.component';
 import { OrderComponent } from './order/order.component';
 import { FormsModule , ReactiveFormsModule} from '@angular/forms';
-import { InputComponent } from './shered/input/input.component';
-import { RadioComponent } from './shered/radio/radio.component';
 import { OrderItensComponent } from './order/order-itens/order-itens.component';
 import { FreteDeleviryComponent } from './frete-deleviry/frete-deleviry.component';
 import { OrderSumaryComponent } from './order/order-sumary/order-sumary.component';
-import { AvaliationComponent } from './shered/avaliation/avaliation.component';
+import { SheredModule } from './shered/shered.module';
 
 @NgModule({
   declarations: [
@@ -35,7 +32,6 @@ import { AvaliationComponent } from './shered/avaliation/avaliation.component';
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    AboutComponent,
     RestaurantsComponent,
     RestaurantComponent,
     RestaurantDetailComponent,
@@ -44,12 +40,9 @@ import { AvaliationComponent } from './shered/avaliation/avaliation.component';
     MenuItemComponent,
     ReviewsComponent,
     OrderComponent,
-    InputComponent,
-    RadioComponent,
     OrderItensComponent,
     FreteDeleviryComponent,
     OrderSumaryComponent,
-    AvaliationComponent
   ],
   imports: [
     BrowserModule,
@@ -57,7 +50,8 @@ import { AvaliationComponent } from './shered/avaliation/avaliation.component';
     FontAwesomeModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SheredModule
 
   ],
   providers: [],

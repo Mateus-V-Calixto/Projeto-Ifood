@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { OrderSumaryComponent } from './order/order-sumary/order-sumary.component';
 import { OrderComponent } from './order/order.component';
@@ -19,7 +18,7 @@ const routes: Routes = [
     {path: 'menu', component:MenuComponent},
     {path: 'reviews', component:ReviewsComponent}
   ]},
-  {path: 'about',component:AboutComponent}
+  {path: 'about', loadChildren: () =>import('./about/about.module').then(m => m.AboutModule)}
 
 ];
 
