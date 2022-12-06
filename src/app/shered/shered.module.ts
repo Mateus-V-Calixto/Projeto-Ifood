@@ -21,4 +21,7 @@ import { AvaliationComponent } from './avaliation/avaliation.component';
     AvaliationComponent
   ]
 })
-export class SheredModule { }
+export class SheredModule {
+  
+
+ }
